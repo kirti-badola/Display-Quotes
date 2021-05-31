@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display quote</title>
+	 <link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+
+	<div class="container">
+		<button type="button" id="quotebtn">Generate Quote</button>
+		<blockquote>
+			<h2 id="quote">quote</h2>
+		</blockquote>
+		<h3 id="quoteauthor">-  Author</h3>
+	</div>
+
+
+	<script type="text/javascript">
+		const quotes = [
+		{
+			name: 'kirti jain',
+			quote: 'keep learning, keep growig and keep smiling.'
+		},
+
+		{
+			name: 'Claude Louis Hector De Villars',
+			quote: 'God save me from my friends. I can protect myself from my enemies.'
+		},
+
+		{
+			name: 'David Thoreau',
+			quote: 'The price of anything is the amount of life you exchange for it.'
+		},
+
+
+		{
+			name: 'Charles Lindbergh',
+			quote: 'Life is like a landscape. You live in the midst of it but can describe it only from the vantage point of distance.'
+		},
+
+
+		{
+			name: 'Tyne Daly',
+			quote: 'A critic is someone who never actually goes to the battle, yet who afterwards comes out shooting the wounded.'
+		},
+
+		{
+			name: 'life',
+			quote: 'Life is too short and sweet to be spent by cribbing and complaining about things. Here are some random quotes about the most wonderful gift that we have got'
+		}
+	]
+
+		const quotebtn = document.querySelector('#quotebtn');
+		const quoteauthor = document.querySelector('#quoteauthor');
+		const quote = document.querySelector('#quote');
+
+		quotebtn.addEventListener("click", function()
+		{
+			let number = Math.floor(Math.random()*quotes.length);
+			quoteauthor.innerHTML = quotes[number].name;
+			quote.innerHTML = quotes[number].quote;
+		})
+
+
+	</script>
+</body>
+</html>
